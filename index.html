@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <title>It's so boring</title>
+  </head>
+  <body>
+    <section>
+      <img class="boring" src="img/wall.png" alt="" />
+      <div class="very-big-flex">
+        <div class="second-big-flex">
+          <h1 id="title">Let's find you something to do</h1>
+          <div class="random-wrapper">
+            <p>Type: <span id="type"></span></p>
+            <p class="rantitle">
+              You can <span id="activity"></span> for <span id="price"></span>$
+            </p>
+          </div>
+          <!--    type    -->
+          <div id="big-wrapper">
+            <div class="lil-wrapper-one">
+              <h2 id="titleh2">Chose your Type</h2>
+              <select id="chosetype" class="custom-select">
+                <option value="education">Education</option>
+                <option value="recreational">Recreational</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="charity">Charity</option>
+                <option value="cooking">Cooking</option>
+                <option value="social">Social</option>
+                <option value="music">Music</option>
+              </select>
+              <button onclick="typeFunction()" class="btn btn-secondary btn-sm">
+                Validation
+              </button>
+              <p>Type: <span id="typed"></span></p>
+              <div id="wrapper-display">
+                <p>
+                  You can <span id="activityd"></span> for
+                  <span id="priced"></span>$
+                </p>
+              </div>
+              <!--    nbr    -->
+              <div id="big-wrappert">
+                <h2 id="titleh2t">Chose your Participant</h2>
+                <select id="chosetypet" class="custom-select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button
+                  onclick="nbrFunction()"
+                  class="btn btn-secondary btn-sm"
+                >
+                  Validation
+                </button>
+                <p>Participant: <span id="typedt"></span></p>
+                <div id="wrapper-displayt">
+                  <p>
+                    You can <span id="activitydt"></span> for
+                    <span id="pricedt"></span>$
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="lil-wrapper-two">
+              <img class="img-type" id="standar" src="img/standar.svg" alt="" />
+              <img class="img-type" id="charity" src="img/charity.svg" alt="" />
+              <img
+                class="img-type"
+                id="education"
+                src="img/education.svg"
+                alt=""
+              />
+              <img class="img-type" id="social" src="img/social.svg" alt="" />
+              <img class="img-type" id="cooking" src="img/cooking.svg" alt="" />
+              <img class="img-type" id="music" src="img/music.svg" alt="" />
+              <img
+                class="img-type"
+                id="recreational"
+                src="img/recreational.svg"
+                alt=""
+              />
+              <img
+                class="img-type"
+                id="relaxation"
+                src="img/relaxation.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="second-big-flexx">
+          <div class="book-wrapper">
+            <div class="flex-music">
+              <h2>If you are bored listen to music</h2>
+              <h4>Write the name of a song</h4>
+              <input id="input" type="text" />
+              <button onclick="music()" class="btn btn-secondary btn-sm">
+                Validation
+              </button>
+            </div>
+            <div class="flex-music">
+              <p id="p">
+                Listen to the music call <samp id="name-music"></samp>
+              </p>
+              <p id="pp">
+                You can click on the name to listen to the music
+              </p>
+              <span id="musdes"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
