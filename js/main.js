@@ -1,10 +1,7 @@
-//random
+//random boring solution
 fetch("http://www.boredapi.com/api/activity/")
   .then((response) => response.json())
   .then((response) => {
-    // Code éxécuté quand vous recevez la réponse
-    console.log(response);
-
     let pone = document.getElementById("activity");
     pone.innerText = response.activity;
 
@@ -16,7 +13,7 @@ fetch("http://www.boredapi.com/api/activity/")
   })
   .catch((error) => alert("Erreur : " + error));
 
-//type function
+//type functionF
 function typeFunction() {
   document.getElementById("wrapper-display").style.display = "block";
   let type = document.getElementById("chosetype").value;
@@ -24,8 +21,6 @@ function typeFunction() {
   fetch("http://www.boredapi.com/api/activity?type=" + type)
     .then((response) => response.json())
     .then((response) => {
-      // Code éxécuté quand vous recevez la réponse
-      console.log(response);
       let poned = document.getElementById("activityd");
       poned.innerText = response.activity;
 
@@ -37,6 +32,7 @@ function typeFunction() {
     })
     .catch((error) => alert("Erreur : " + error));
 
+  //section fot svg display:none or block
   if (type === "charity") {
     document.getElementById("charity").style.display = "block";
     document.getElementById("standar").style.display = "none";
@@ -112,7 +108,7 @@ function nbrFunction() {
   fetch("http://www.boredapi.com/api/activity?participants=" + nbr)
     .then((response) => response.json())
     .then((response) => {
-      // Code éxécuté quand vous recevez la réponse
+      //result function nbr
       let ponedt = document.getElementById("activitydt");
       ponedt.innerText = response.activity;
 
@@ -124,36 +120,34 @@ function nbrFunction() {
     })
     .catch((error) => alert("Erreur : " + error));
 }
-//book
+//music function
 function music() {
-    document.getElementById("education").style.display = "none";
-    document.getElementById("standar").style.display = "none";
-    document.getElementById("social").style.display = "none";
-    document.getElementById("cooking").style.display = "none";
-    document.getElementById("music").style.display = "none";
-    document.getElementById("recreational").style.display = "none";
-    document.getElementById("relaxation").style.display = "none";
-    document.getElementById("charity").style.display = "none";
+  //display: none svg
+  document.getElementById("education").style.display = "none";
+  document.getElementById("standar").style.display = "none";
+  document.getElementById("social").style.display = "none";
+  document.getElementById("cooking").style.display = "none";
+  document.getElementById("music").style.display = "none";
+  document.getElementById("recreational").style.display = "none";
+  document.getElementById("relaxation").style.display = "none";
+  document.getElementById("charity").style.display = "none";
   let mus = document.getElementById("input").value;
   console.log("https://searchly.asuarez.dev/api/v1/song/search?query=" + mus);
   fetch("https://searchly.asuarez.dev/api/v1/song/search?query=" + mus)
     .then((response) => response.json())
     .then((response) => {
-      console.log(response);
+      //result api music
       let namemusic = document.getElementById("name-music");
       namemusic.innerText = mus;
       document.getElementById("p").style.display = "block";
       let musique = document.getElementById("musdes");
       for (let result of response.response.results) {
-        //musique.innerText += result.id;
-        let nameid = document.createElement("a")
-        nameid.className = 'nameid';
-        nameid.href ="https://www.youtube.com/results?search_query="+result.name
-
-   
-        let id = document.createElement("button")
-        id.innerText= result.id
-        nameid.innerText= result.name
+        let nameid = document.createElement("a");
+        nameid.className = "nameid";
+        //YouTube search
+        nameid.href =
+          "https://www.youtube.com/results?search_query=" + result.name;
+        nameid.innerText = result.name;
         musique.appendChild(nameid);
       }
     })
